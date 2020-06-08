@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyper Link</title>
+</head>
+
+<style>
+    div {
+        background-color: cornflowerblue;
+        width: 600px;
+        height: 2000px;
+    }
+</style>
+
+<body>
+
+    <h1>a(anchor)요소는 하이퍼링크, 책갈피, 메일, <br> 자바스크립트를 수행할 수 있음</h1>
+    <h2>상태경로 이동</h2>
+    <a href="http://localhost/html/step04_boxElement.html">블럭요소 데모(절대경로)</a><br>
+    <a href="./step02_blockElement.html">인라인 요소 데모(상대경로)</a><br>
+    <a href="../notice/list.html">내 위치에서 위로 올라가는 공지사항 리스트(상대경로)</a><br>
+    <a href="/notice/list.html">내 위치고 뭐고 최상위로 올라가는 공지사항 리스트(절대경로)</a>
+    <!--사실 안그래보이지만 앞에 http://hocalhost가 생략되어잇는거임
+    로컬에 있는거라 생략 가능 - 로컬 아니면 다 정확히 넣어줘야함-->
+
+    <h2>절대경로 이동</h2>
+    <a href="https://www.naver.com/">외부링크 (네이버)로 이동</a>
+
+    <h2>오픈할 때 사로운 창으로 열기</h2>
+    <a href="../notice/list.html" target="_blank">공지사항 리스트(새창-blank)</a>
+    <h2>일반 하이퍼링크랑 똑같음</h2>
+    <a href="../notice/list.html" target="_self">공지사항 리스트(새창-self)</a>
+
+    <h2>메일보내기</h2>
+    <a href="mailto:mkim19@mica.edu">메일보내기!</a> <!--보통 잘 안쓰긴 함-->
+
+    <h2>전화걸기</h2>
+    <a href="tel:01022862176">근데 이건 모바일에서만 가능함!</a>
+
+    <h2>자바스크립트 호출</h2>
+    <a href="javascript: alart('자니....');">자바 호출</a>
+
+    <h2>책갈피</h2>
+    <a href="#bottom">특정영역으로 이동</a>
+
+    <div></div>
+    <p id="bottom">여기로 이동하지롱</p>
+
+    <h3>사실 메일보내기 빼고는 다 많이 사용하지롱</h3>
+
+</body>
+</html>

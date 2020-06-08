@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <style>
+
+        .container {
+            margin: 0 auto;
+            width: 600px;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid rgb(0, 0, 0);
+        }
+  
+    </style> 
+    <!--right랑 left를 오토로 주면 중앙으로 옴, 
+        보더 컬랩스를 사용해 보더들 사이 중간을 무너뜨리기-->
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>table로 정보 출력</h3>
+    <table>
+        <caption>친구 목록입니다</caption> 
+        <!--제목 근데 얘는 실제 화면에선 잘 안보여짐- 코리안 정서에 노노-->
+        <colgroup> <!--각각 셀 크기-->
+        <col width = "100px"/>
+        <col width = "300px"/>
+        <col width = "100px"/>
+        </colgroup>
+
+        <thead> <!--테이블 해드 -기본은 굵은글씨에 중앙정렬-->
+            <th>번호</th>
+            <th>이름</th>
+            <th>주소</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td colspan="2">송하늘</td> <!--1번이 다 쓰도록 만들어버리기-->
+            </tr>
+            <tr>
+                <td rowspan="2">2</td>
+                <td>최예리</td>
+                <td rowspan="2">볼티모어</td>
+            </tr>
+            <tr>
+                <!--여기 번호 td를 없애버려야함-->
+                <td>최세라</td>
+            </tr>
+
+        </tbody>
+    </table>
+    </div>
+    
+</body>
+</html>

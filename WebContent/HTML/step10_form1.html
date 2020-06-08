@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+        .container1 {
+            margin: 10px auto;
+        }
+        .container2 {
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container1">
+        <h3>form요소 작성</h3>
+        <form action="save.html" method="post">
+            <!--label for id 반드시 지켜서 코딩할 것-->
+            <label for="email"> EMAIL </label>
+            <input type="text" name = "이메일" id="email"> <br>
+            <!--name = 파라미터의값 
+                id = for이랑 id랑 일치하면 넓은범위 선택이 가능-->
+            <label for="pwd"> PASSWORD</label>
+            <input type="password" name="비밀번호" id="pwd"> <br>
+            <button type="submit">login</button>
+            <button type="reset">cancle</button>
+        </form>
+
+        <div class="container2">
+            <h3>form요소 작성</h3>
+            <form action="save.html" method="get">
+                <!--get으로 두면 다 보인다 - 보안 x-->
+                <label for="email"> EMAIL </label>
+                <!--이메일 하면 이메일 형식인지 아닌지 체크한다 
+                    - 모바일가면 자판 올라오는게 다르다 @ 포함해서 올라옴
+                    이 외에도 search등등 별게 다 있지만 text를 가장 많아 씀-->
+                <input type="email" name = "이메일" id="email">  <br>
+                <label for="pwd"> PASSWORD</label>
+                <input type="password" name="비밀번호" id="pwd"> <br>
+                <button type="submit">login</button>
+                <button type="reset">cancle</button>
+            </form>
+
+    </div>
+    
+</body>
+</html>
