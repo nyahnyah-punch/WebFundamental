@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+
+    <style>
+        .container {
+            margin: 10px auto;
+            width: 600px;
+            background-color: rgb(233, 233, 233);
+        }
+        .regist {
+            width: 600px;
+            height: 35px;
+            border-bottom: 1px solid black;
+        }
+        .idpwdbox {
+        width: 100%;
+        margin: 8px 0;
+        border: rgb(233, 233, 233);
+        border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3 class="regist">회원가입</h3>
+        <form action="save.html" method="post">
+
+            <label class="idpwdbox" for = "id">아이디</label><br>
+            <input type="text" name="id" id="id" placeholder="영문과 특수문자 사용"><br>
+
+            <label for="age">나이</label><br>
+            <input type="number" name="age" id="age" placeholder="나이를 입력하세요!"><br>
+
+            <fieldset>
+                <legend>성별을 선택하세요.</legend>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">남자</label>
+
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">여자</label>
+
+                <input type="radio" name="gender" id="other" value="other" checked="checked">
+                <label for="other">other</label>
+            </fieldset> <!--라디오의 핵심은 단일선택이다-->
+
+            <fieldset> <!--다중선택-->
+                <legend>취미를 선택하세요.</legend>
+                <input type="checkbox" name="hobby" id="game" value="game">
+                <label for="game">게임</label>
+
+                <input type="checkbox" name="hobby" id="music" value="music>
+                <label for="music">음악듣기</label>
+
+                <input type="checkbox" name="hobby" id="eat" value="eat">
+                <label for="eat">먹기</label>
+            </fieldset>
+
+            <label for="job">직업</label> <!--drop down단일선택-->
+            <select name="job" id="job">
+                <option value="teacher">선생님</option>
+                <option value="programmer">프로그래머</option>
+                <option value="designer">디자이너</option>
+                <option value="none">N/A</option>
+            </select><br>
+
+            <label for="photo">사진</label>
+            <!--js사용하면 이미지 빼고 못넣게 한다던가 이런게 가능해짐-->
+            <input type="file" name="photo" id="photo"><br>
+
+            <label for="comment">자기소개</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
+
+            <button type="submit">가입</button>
+            <input type="submit" value="가입"> 
+            <!--버튼이랑 인풋이랑 둘이 같은표현임-->
+            <button type="reset">취소</button>
+            <input type="reset" value="취소">
+        </form>
+    </div>
+    
+</body>
+</html>

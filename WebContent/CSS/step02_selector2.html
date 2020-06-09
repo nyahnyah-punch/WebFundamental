@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+
+    <style>
+        .container1 {
+            background-color: pink;
+        }
+        .container1 p { /*continer클래스 중 p인 요소 선택*/
+            background-color: purple;
+        }
+        .container1 > p { /*continer클래스 중 p인 자식만 선택 (자손빼고)*/
+            color: pink;
+        }
+        .container1 + p { /*continer클래스의 형재중 바로 인접형재*/
+            color: purple;
+        }
+        .container1 ~ p { /*continer클래스의 모든형재 선택*/
+            background-color: royalblue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container1">
+        <p>I am tired</p>
+        <p>Got one and a half minutes left</p>
+
+        <div>
+            <p>I want to go home</p>
+            <p>Let me go home</p>
+        </div>
+    </div>
+    <p>I want to go home</p>
+    <p>I want to go home</p>
+    <p>I want to go home</p>
+    <p>I want to go home</p>
+    
+</body>
+</html>

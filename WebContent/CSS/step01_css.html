@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External & Internal & Inline CSS</title>
+    <link href="custom.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<style>
+    div {
+        background-color: royalblue;
+    }
+
+</style>
+
+<body>
+
+    <div>internal</div> <!--내부 *속도 빠르므로 권장-->
+    <p>external</p> <!--외부-->
+    <span style="font-size: 20px;">inline</span> <!--인라인-->
+    <!--우선순위 자체는 인라인 > 내부 > 외부-->
+    
+</body>
+</html>

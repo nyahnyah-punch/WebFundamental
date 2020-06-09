@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+
+    <style>
+        /*element selector*/
+        div {
+            border-width: 1px;
+            border-style: solid;
+            border-color: salmon;
+        } /*모든 스타일들에 다 영향을 주므로 디폴트 스타일러가 중요하다*/
+
+        /*class selector*/
+        .bg-yellow {
+            background-color: slateblue;
+        }
+
+        /*id selector*/
+        #myDiv {
+            color: peru;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>div1</div>
+    <div class="bg-yellow">div2</div>
+    <div class="bg-yellow">div3</div>
+    <div class="bg-yellow">div4</div>
+    <div id="myDiv">div5</div>
+    <div id="myDiv">div6</div>
+    
+</body>
+</html>
