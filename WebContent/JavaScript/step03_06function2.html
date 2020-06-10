@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+
+    <script>
+        //생성자함수 - type of = object
+        const Student = function(name, korean, math) {
+            this.name = name;
+            this.korean = korean;
+            this.math = math;
+            this.getSum = function() {
+                return this.korean+this.math;
+            }
+        }
+        const s1 = new Student('철수', 90, 85);
+        console.log(s1.name);
+        console.log(s1.getSum());
+        console.log(typeof s1);
+        console.log(s1);
+
+        //평균구하는 함수를 추가 (상속이라 조금 비슷한거 - 기존 오브젝트 확장)
+        Student.prototype.getAvg = function() {
+            return this.getSum()/2;
+        }
+        console.log(s1.getAvg());
+
+        //예랑 위에랑 결국 똑같은거임 - 
+        //근데 이거는 값이 확정이 돼있을 때 사용하는거고 객체를 생성할 때 
+        //값을 생성하고싶으면 생성자함수를 사용하는게 좋다
+        const s2 = {
+            "name": "철수",
+            "korean": 90,
+            "math": 90,
+            "getSum": function() {
+                return this.korean + this.math;
+            }
+        }
+        console.log(typeof s2);
+        console.log(s2);
+
+        //함수랑 필요한 기능을 만들어서 사용할 수 있다
+        let sObj = "    졸려...     "
+        String.prototype.trim = function() {
+            return this.replace(/(^\s*)|(\s*$)/gi, "")
+            //공백으로 시작하거나 공백으로 끝나면 다 없애버려라
+        }
+        let str = sObj.trim();
+        console.log("-------"+str+"-------");
+
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+</html>

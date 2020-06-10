@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booelan</title>
+
+    <script>
+        let isRun = true;
+        let isWait = false;
+        let isSmaller = 10>5;
+        let isEqual = 10 == 10000;
+        let isEqual2 = 10 === "10";
+        let isDifference = 10 != 100;
+
+        //falsy values
+        let a = 0; //0을 제외한 나머지 값은 트루
+        if(a) {
+            console.log('true');
+        } else {
+            console.log('false');
+        }
+
+        let b = ''; //비어있으면 거짓 있으면 트루
+        if(b) {
+            console.log('true');
+        } else {
+            console.log('false');
+        }
+
+        let c; //선언만 해놓고 생성 안해주면 거짓
+        if(c) {
+            console.log('true');
+        } else {
+            console.log('false');
+        }
+
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+</html>

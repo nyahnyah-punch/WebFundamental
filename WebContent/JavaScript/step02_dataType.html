@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataType</title>
+
+    <script>
+       //number type
+       let num1 = 10;
+       let num2 = 20.1;
+       console.log(typeof num1);
+       console.log(typeof num2);
+
+       //string type
+       let myName = 'miri';
+       let yourName = 'yeri';
+       console.log(typeof myName);
+       console.log(typeof yourName);
+
+       //boolean
+       let isRun = true;
+       let isGreater = 10>5;
+       console.log(typeof isRun);
+       console.log(typeof isGreater);
+
+       //값비교 & 자료형 비교
+       let a1 = 10;
+       let a2 = '10';
+       console.log(a1 == a2); //값비교
+       console.log(a1 === a2); //자료형 비교
+
+       //undefined
+       let a3;
+       console.log(a3);
+
+       //배열 비교 (array-object type)
+       const names = ['미리', '예리', '하늘'];
+       console.log(typeof names); //object타입으로 나옴
+
+       //(plain)object type - 자바에서 제일 중요한 객체 중 하나
+       const obj = {num1: 1, name: "김미리", id: "mirimiri"};
+       //key: value, key: value <- 맵구조로 되어있다
+       console.log(typeof obj);
+
+       //function
+       const f = function() {
+       }
+       console.log(typeof f);
+
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+</html>

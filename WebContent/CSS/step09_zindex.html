@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index</title>
+
+    <style>
+        img {
+            position: absolute;
+            width: 200px;
+        }
+        #one {
+            left: 20px;
+            top: 20px;
+            z-index: 9999999; /*높을수록 위로 올라온다*/
+        }
+        #two {
+            left: 100px;
+            top: 100px;
+            z-index: -9999999; 
+        }
+        #three {
+            left: 150px;
+            top: 250px;
+            z-index: 1;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <img id="one" src="zindex1.jpeg">
+    <img id="two" src="zindex2.jpg">
+    <img id="three" src="zindex3.jpg">
+    
+</body>
+</html>

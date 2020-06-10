@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+
+    <style>
+        #one {
+            display: none;
+        }
+
+        /*inline*/
+        #two {
+            width: 250px;
+            height: 200px; /*디스플레이 바꾸면 width height은 안먹힘*/
+            padding: 10px;
+            border: 1px solid burlywood;
+            display: inline;
+        }
+
+        /*inline-block*/
+        #three { 
+            width: 250px;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid burlywood;
+            display: inline-block; /*개행 안하지만 기능은 block이랑 같음*/
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>display 속성</h1>
+    <button id="btm">눌러보세요!</button>
+    <p id="one">I am tired again.</p>
+    <hr>
+    <h1>inline vs inlie block</h1>
+    <div id="two">I want to go home as usual.</div>
+    <div id="three">But too many hours left..</div>
+    <div>sleeeeppppppyyyyyyyy :(</div>
+    
+</body>
+</html>

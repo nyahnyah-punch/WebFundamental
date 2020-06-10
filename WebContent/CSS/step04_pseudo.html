@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo </title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgb(114, 84, 153);
+        }
+        /*pseudo class*/
+        /*hover 지정해보기*/
+        .box:hover {
+            background-color: rgb(114, 84, 153);
+        }
+        /*focus pseudo class*/
+        input:focus {
+            background-color: rgb(114, 84, 153);
+        }
+        /*active*/
+        button:active {
+            background-color: rgb(114, 84, 153);
+        }
+        /*밑줄제거*/
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: crimson;
+            font-weight: bold;
+        }
+        /*한번도 방문하지 않은*/
+        a:link {
+            color: black;
+        }
+        a:visited {
+            color: rgb(255, 194, 62);
+        }
+
+        /*pseudo element*/
+        #one::first-letter {
+            font-weight: bold;
+            color: blueviolet;
+        }
+        #first::first-line {
+            background-color: chocolate;
+        }
+        #quote::before {
+            content: "'";
+            color: rgb(255, 0, 191);
+        }
+        #quote::after {
+            content: "'";
+            color: rgb(255, 0, 191);
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="box"></div>
+    <input type="text">
+    <input type="text">
+    <button>버튼</button>
+    <button>버튼</button> <br>
+    <a href="http://www.naver.com">NAVER</a>
+    <a href="http://www.google.com">GOOGLE</a>
+    <p id="one">I am tired</p>
+    <p id="first">I want to go home<br>What about you?</p>
+    <p id="quote">sleepy</p>
+    
+</body>
+</html>

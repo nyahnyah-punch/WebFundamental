@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Variable</title>
+
+    <!--여기다가만 코딩 가능-->
+    <script>
+        //숫자 선언 방법
+        var num1 = 9999;
+        var num1 = 8888; //이중선언 가능
+        //출력
+        console.log(num1); //확인은 페이지 들어가서 검색도구 - 콘솔
+        alert(num1); //이렇게 alert로도 확인 가능
+
+        //문자열 선언 방법
+        var myName = '김미리'
+        //;생략 가능 - 그래도 minify할때를 대비해 붙혀서 사용하자...
+        var yourName = "최예리"; //쌍따옴표 홀따옴표 두개 다 가능 
+        var multiName = `오늘도 집에가고싶은 나, 김미리이다. 
+        언제나 늘 집에 가고싶지...
+        지금까지 그뤠왔고, 아풰뤄도, 계쇽
+        What about you?`; //문자열 연결하는 표기법 중 하나 ``
+        console.log(multiName); 
+
+        //언디파인드 선언
+        var test; //undefined도 자료형임 
+
+        //자료형 확인하는 방법
+        console.log(typeof num1);
+        console.log(typeof myName);
+        console.log(typeof test);
+        console.log(typeof test2); //밑에서 선언하고 위에서 호출하기
+
+        //variable hoisting
+        var test2 = 1234;
+
+        //function선언
+        foo();
+        function foo() { //function hoisting
+            console.log('function foo()');
+        }
+
+
+        //근데 가능하면 var 쓰지 마... 젭알...
+        //자바랑 비슷해짐잼!!!!!
+        //근대 사실 이거 안씀 잘... 굳이 들어가서 바꾸기 귀찮쟈나...
+
+        let a1 = 100;
+        // let a1 = 200; //이중선언 노노
+        console.log(a1);
+
+        // console.log(a2);
+        // let a2 = 200; //variable hoisting도 노노
+
+        //var vs let
+        var b1 = 600;
+        console.log(b1); //600
+        if(true) {
+            var b1 = 700;
+            console.log(b1); //700
+        }
+        console.log(b1); //700
+
+        let c1 = 10;
+        console.log(c1); //10
+        if(true) {
+            let c1 = 20;
+            console.log(c1); //20
+        }
+        console.log(c1); //10
+
+        //primitives type & const
+        const d1 = 10;
+        //d1 = 20; //이러면 애러남
+
+        //complex type & const (배열)
+        const e1 = [1, 2];
+        e1.push(3); //이렇게 바로 추가
+        console.log(e1);
+
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+</html>

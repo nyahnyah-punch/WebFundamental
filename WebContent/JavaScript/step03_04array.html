@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+    <script>
+        //베열 생성 및 할당
+        // const num1 = new Array(1,2,3,4);
+        // const num2 = Array(1,2,3,4);
+        const num3 = [1,2,3,4];
+        //출력방법1
+        for(let i=0; i<num3.length; i++) {
+            console.log(num3[i]);
+        }
+
+        num3[99] = 100; //이러면 num3에 방을 99개 만들고 100을 넣어줌
+        //출력방법 2 - for of문 (자바에 인핸스 for문같은거)
+        for(let value of num3) {
+            console.log(value);
+        }
+
+        //배열 추가 - 제일 마지막방에 들어감
+        num3.push(5);
+        for(let i=0; i<num3.length; i++) {
+            console.log(num3[i]);
+        }
+
+        //배열 추가 - 인댁스로 특정 방에 추가
+        num3[49] = 50;
+        for(let i=0; i<num3.length; i++) {
+            console.log(num3[i]);
+        }
+
+        //배열에 모든 자료형 할당 가능
+        const name = ['철수','영희','바둑이']
+        const every = [1, '꽈찌쭈', false]
+
+        //배열에 있는 모든 요소를 문자열로 변환
+        var numToString = num3.join('');
+        console.log(numToString);
+
+
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+</html>

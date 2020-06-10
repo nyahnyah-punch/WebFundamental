@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+
+    <script>
+        //선언적 함수
+        test1();
+        function test1() {
+            console.log("test1 function");
+        }
+
+        //함수식
+        const test2 = function() {
+            console.log("test2 function");
+        }
+        test2();
+
+        //test2의 참조값을 test3에 할당
+        const test3 = test2;
+        test3();
+
+        //함수는 반환값이 있다
+        const plus = function(num1,num2) {
+            return num1 + num2;
+        }
+        let result = plus(10,20);
+        console.log(result);
+        let result2 = plus(10,20,30); //웃긴건 이것도 돌아간다는거 ㅋㅋㅋㅋ
+        console.log(result2);
+        let result3 = plus(10); //이것도 애러가 안남 ㅋㅋㅋㅋㅋ
+        console.log(result3);
+
+        //argument length
+        const plus1 = function(num1,num2) {
+            console.log(arguments.length);
+            return num1 + num2;
+        }
+        let result4 = plus1(10,20,30,40);
+        console.log(result4);
+
+
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+</html>
