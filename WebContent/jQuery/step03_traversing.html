@@ -1,0 +1,109 @@
+
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+    <title>Traversing</title>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+		
+        $(function(){
+			//첫번째
+			//$('li').eq(0).addClass('s')
+			//$('li').first().addClass('s')
+
+			//not
+			//$('li').not(":even").addClass('s'); //짝수
+
+			//each - for loop랑 같이 활용 가능
+			// $('li').each(function(index, element) {
+			// 	console.log(index + "," + $(element)) //li에 있는 택스트
+			// }); 
+			// $('li').each(function() { //인댁스 필요없이 this로 자기자신 호출해줌 
+			// 	console.log($(this).text()); //입방법을 더 많이 사용함 
+			// }); 
+
+			//children
+			//$('#root').children().addClass('s'); //root에 있는 자식들만 쭈루룰룩
+
+			//closest
+			//현재 앨리먼트랑 가장 가까운 앨리먼트 + 부모 앨리먼트를 찾는거
+			//$('li').eq(0).closest('ul').addClass('s'); //third랑 가장 가까운 div를 찾기
+
+			//find - 자식이던 자손이던 모든 li는 다찾음 
+			//$('#root').find('li').addClass('s');
+			//$('#root li').addClass('s');
+			
+			//$('#root').find('li').first().addClass('s');
+			//$('#root').find('li').next().addClass('s');
+			//$('#root').find('li').first().nextAll().addClass('s');
+
+			//parents - 자기자심 포함 안하고 바로 부모로 감
+			//$('#root').find('li').parent().addClass('s');
+			//$('#root').find('li').parents().addClass('s');
+			
+			//siblings - id가 first인 아이 찾기 
+			$('#first').siblings().addClass('s');
+
+        });
+    </script>
+
+	<style type="text/css">
+		
+		div, ul, li {
+			border : 2px solid #1d2f6f;
+			margin : 10px;
+			padding : 10px;
+		}
+		#message { 
+		width:98%;
+  		height:auto;
+  		font-size:20px;
+		
+		padding: 14px 10px; 
+		border: 1px solid #999; 
+		
+		}
+
+
+		#panel ul{
+			list-style : none;
+		}
+		
+		.s{
+			border : 2px solid #fac748;
+			background-color : #8390fa;
+		}
+		
+    </style>
+</head>
+
+<body>
+	
+	<div id="panel">
+        div id="panel"
+		<div id="root">
+			div id="root""
+			<div id="first">
+				div id="first"
+			</div>
+			<div>
+				div
+				<ul>
+					ul
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li"></li>
+				</ul>
+				<div class="third">div class="third"</div>
+			</div>
+			<div>div</div>
+			
+		</div>
+	</div>
+	
+</body>
+</html>

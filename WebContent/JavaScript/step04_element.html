@@ -7,21 +7,13 @@
 
     <script>
         window.onload = function() {
-        //리스트에 4를 추가해보기
-        let msg = "4";
-        const ul = document.getElementById("ulList");
-        const li = document.createElement("li");
-        li.innerText = msg;
-        ul.append(li);
-
-        //////////이거 수정하기 + 주석달기//////////
         //버튼에 이벤트 넣어서 사용자가 직접 추가할 수 있게 하기
-        document.getElementById("addBtn").addEventListener(
-            "click", function(){ //대기하고있다가 인풋이 들어오면 
-        let inputObj = document.getElementById("ulList");
-        let msg = document.getElementById("li");
+        document.getElementById("addBtn").addEventListener( //document안에 id가 addBtn인거를 찾아서
+            "click", function(){ //클릭이 올때까지 기다리고 있다가 
+        let inputObj = document.getElementById("inputMsg"); //inputObj라는걸 만들어서 inputMsg를 호출하는걸 만들어줌
+        let msg = inputObj.value; //메세지는 inputObj에서 들어오는 value
         if(msg) { //falcy value
-        const ul = inputObj;
+        const ul = document.getElementById("ulList"); //ulList에 추가해주기 
         const li = document.createElement("li");
         li.innerText = msg;
         ul.append(li); //메세지 보여주기

@@ -890,7 +890,7 @@
         let str = '{"name": "aaa", "age": "11"}'; //안에는 오브젝트지만 전체는 문자열이다
         const member = JSON.parse(str); //문자열 오브젝트를 변환
         console.log(member.name);
-
+        //제이슨 stringify: 오브젝트 -> 문자열 
         let memberStr = JSON.stringify(member); //다시 문자열로 원상복귀
         alert(memberStr);
         

@@ -1,0 +1,97 @@
+
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+    <title>Selector</title>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+		
+        $(function(){
+            //element selector
+            //$('div').addClass('s'); //모든 div에 s라는 클래스를 할당하기
+
+            //id selector
+            //$('#root').addClass('s');
+
+            //class selector
+            //$('.third').addClass('s')
+
+            //root selector (자식) - 이거밖에 안씀 사실 ㅋㅋㅋㅋ
+            //$('#root > div').addClass('s');
+
+            //decendent sleector (자손)
+            //$('#root div').addClass('s');
+
+            //etc psudo element selector
+            // $('li:nth(2)').addClass('s');
+            // $('li:even(2)').addClass('s');
+            // $('li:gt(2)').addClass('s');
+            // $('li:first').addClass('s');
+            // $('li:last').addClass('s');
+            $('li:empty').addClass('s')
+
+            //selector보다 강력한 앨리먼트 찾아가는 방법 
+
+        });
+    </script>
+
+	<style type="text/css">
+		
+		div, ul, li {
+			border : 2px solid #1d2f6f;
+			margin : 10px;
+			padding : 10px;
+		}
+		#message { 
+		width:98%;
+  		height:auto;
+  		font-size:20px;
+		
+		padding: 14px 10px; 
+		border: 1px solid #999; 
+		
+		}
+
+
+		#panel ul{
+			list-style : none;
+		}
+		
+		.s{
+			border : 2px solid #fac748;
+			background-color : #8390fa;
+		}
+		
+    </style>
+</head>
+
+<body>
+	
+	<div id="panel">
+        div id="panel"
+		<div id="root">
+			div id="root""
+			<div id="first">
+				div id="first"
+			</div>
+			<div>
+				div
+				<ul>
+					ul
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li class="third"></li>
+				</ul>
+				<div class="third">div class="third"</div>
+			</div>
+			<div class="third">div</div>
+			
+		</div>
+	</div>
+	
+</body>
+</html>

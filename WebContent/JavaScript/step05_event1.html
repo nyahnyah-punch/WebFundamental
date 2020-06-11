@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+
+    <script>
+        //인라인방식
+        function send() {
+                alert('전송1');
+            }
+
+        window.onload = function () {
+
+            //리스너방식 (click event)
+            document.getElementById("sendBtn").addEventListener("mouseover", function () { //이벤트 종류, 함수
+                alert("전송2");
+            })
+
+            //리스너방식 (key event)
+            document.getElementById("inputText").addEventListener("keydown", function () {
+                if (event.keyCode == 13) {
+                    alert("전송3")
+                }
+            })
+        }
+    </script>
+
+</head>
+
+<body>
+    <!--inline event - 아이디가 필요없다-->
+    <button onclick="javascript:send();">전송1</button>
+
+    <!--listener event-->
+    <button id="sendBtn">전송2</button>
+    <input type="text" id="inputText">
+
+</body>
+
+</html>

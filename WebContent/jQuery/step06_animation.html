@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+    $(function(){
+			$('#btn1').click(function(){
+				//$('#target').fadeOut('fast');
+				//$('#target').hide('slow');
+				$('#target').slideUp('easeIn');
+            });
+            
+			$('#btn2').click(function(){
+				//$('#target').fadeIn('fast');
+				//$('#target').show('slow');
+				$('#target').slideDown('easeOut');
+            });
+            
+		});
+    </script>
+
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: #98c1d9;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <input type="button" id="btn1" value="X">
+    <input type="button" id="btn2" value="O">
+    <div id="target">
+
+    </div>
+    
+</body>
+</html>

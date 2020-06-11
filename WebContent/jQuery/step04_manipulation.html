@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation</title>
+
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        $('p').prepend('<strong> Hi<br> </strong>');
+        $('p').append('<strong> Bye<br> </strong>');
+        //똑같은건데 위에가 더 사용하기 편하다 
+        $('<strong> Hello<br> </strong>').prependTo('p');
+        $('<strong> Chao<br> </strong>').appendTo('p');
+
+        //before after - same level
+        $('p').after('<strong> baba </strong>');
+        $('p').before('<strong> Ni Hao </strong>');
+
+        //안에 들어가는 택스트 바꾸기
+        $('p').text('나른해...'); //문제는 순수 택스트로 들어가는거라 strong 이런거 안먹힘 
+        $('p').html('<strong>나른해...</strong>'); //html로 써줘야 먹힘 
+
+        //택스트 불러오기
+        let msg1 = $('p').text();
+        console.log(msg1);
+        let msg2 = $('p').html();
+        console.log(msg2);
+
+        //div 만들어주기
+        $('p').wrap('<div></div>');
+
+        //지우기
+        //$('p').remove();
+        //$('p').detach();
+
+        //싹 비우기 - 앨리먼트는 남아있는데 싹 사라짐: 이걸 삭제보다 많이 사용함
+        $('div').empty();
+
+    })
+    </script>
+
+    <style>
+        div {
+            border: 1px solid #474789;
+        }
+        p {
+            background-color: #ffb17a;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p>I am sleepy</p>
+    <div id = "aa">
+        <div>!</div>
+    </div>
+    
+</body>
+</html>

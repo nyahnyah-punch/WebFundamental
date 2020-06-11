@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+
+    <style>
+        #myBox {
+            width: 200px;
+            height: 200px;
+            border: 1pt solid blueviolet;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="myBox">box</div>
+    
+</body>
+
+<script>
+    const divObj = document.getElementById("myBox");
+    divObj.addEventListener("mouseover", function(){
+        this.style.backgroundColor = "blueviolet";
+    });
+    divObj.addEventListener("mouseout", function(){
+        this.style.backgroundColor = "white";
+    });
+    divObj.addEventListener("mousedown", function(){
+        this.style.backgroundColor = "black";
+    });
+    divObj.addEventListener("mouseup", function() {
+        this.style.backgroundColor = "grey";
+    })
+
+</script>
+
+</html>

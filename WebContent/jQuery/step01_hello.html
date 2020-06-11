@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello jQuery :)</title>
+
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        //window.onload기능
+        $(document).ready(function () {
+            $('div').css("color", "#ffffff");
+            $('.welcome1').html('<p>hello jquery</p>').css("background-color", "blue");
+            $('.welcome2').html('<p>hello jquery</p>').css("background-color", "#000000");
+
+        }) //$(function(){여기다가 코딩})도 가능 <--얘가 백만배 더 편하니 얘를 쓰자 앞으론
+    </script>
+
+</head>
+<body>
+    <div class="welcome1"></div>
+    <div class="welcome2"></div>
+    
+</body>
+</html>
