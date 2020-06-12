@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Get</title>
+
+    <script type="text/javascript" src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        var xhr; //값이 바뀌어야하므로 var사용
+        //const xhr = new XMLHttpRequest();로 해줄거면 const사용 가능
+        if(window.XMLHttpRequest) {
+            //모질라 사파리 크롬 IE7이상 etc
+            xhr = new XMLHttpRequest(); //요즘은 이거 하나면 다 됨
+        } else {
+            //IE6이하 - 사실 아무도 이거 안씀 이제
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if(xhr == null) {
+            alert("Error - xhr object");
+        }
+
+        $(function() {
+            $('#btn').click(function() {
+                //데이터 보내는거
+                let url = 'json_data.json';
+                xhr.open('GET', url, true); //false=동기 true=비동기
+                xhr.send(null);
+
+                //데이터 받는거 (call back)
+                xhr.onreadystatechange = function() { 
+                    if(xhr.readyState == 4 && xhr.status ==200) {
+                        console.log(xhr.responseText);
+
+                        //받은 문자열 -> 자바스크립트 객체
+                        const obj = JSON.parse(xhr.responseText); 
+                        //obj안에 리스트가 들어있으니까 obj사용해서 코딩해주면 됨
+                        const listArray = obj.cafelist; //배열로 불러오기
+
+                        //끄집어내기
+                        let message = "<ul>"; //ul하나 만들어주기
+
+                        for(let i=0; i<listArray.length; i++) {
+                            const listObj = listArray[i]; //위에서 만들어준 배열 호출
+                            let name = listObj.name; //만들어준 리스트 오브젝트에서 이름 
+                            let clubId = listObj.clubId; //만들어준 리스트 오브젝트에서 아이디
+                            message += "<li>" +name+ "("+clubId+")</li>"; //출력 방식
+                        }
+                        message += "</ul>";
+                        $('#sel').append(message);
+                    }
+
+                }
+            })
+
+
+        })
+
+    </script>
+
+    <style>
+        #btn {
+            background-color: rgb(255, 185, 255);
+            color: cornflowerblue;
+            font-weight: bold;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="btn">GET DATA</button>
+    <div id="sel"></div>
+    
+</body>
+</html>

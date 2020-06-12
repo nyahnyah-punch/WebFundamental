@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Get</title>
+
+    <script type="text/javascript" src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(function() {
+            $('#btn').click(function() {
+                $.ajax({
+                    url : 'json_data.json',
+                    type : 'GET',
+                    dataType : 'json',
+
+                    error : function() {
+                        alert("Error");
+                    },
+
+                    success: function(obj) {
+                        const listArray = obj.cafelist;
+
+                        let message = "<ul>";
+
+
+                        for(let i=0; i<listArray.length; i++) {
+                            const listObj = listArray[i];
+                            let name = listObj.name;
+                            let clubId = listObj.clubId; 
+                            message += "<li>" +name+ "("+clubId+")</li>";
+                        }
+                        message += "</ul>";
+                        $('#sel').append(message);
+                    }
+                })
+            })
+
+
+        })
+
+    </script>
+
+    <style>
+        #btn {
+            background-color: rgb(255, 185, 255);
+            color: cornflowerblue;
+            font-weight: bold;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="btn">GET DATA</button>
+    <div id="sel"></div>
+    
+</body>
+</html>

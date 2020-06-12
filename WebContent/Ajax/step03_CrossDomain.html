@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Get</title>
+
+    <script type="text/javascript" src="../jQuery/jquery-3.5.1.js"></script>
+    <script>
+        window.onload = function() { //다 생성되면 해당 url 생성
+            loadScript('http://www.acornacademy.co.kr/blockchain/naver_json.jsp?call=test');
+        }
+
+        function test(obj) { //이러면 위에서 함수로 감싸준 내역이 obj안에 함수 내용만 쭈루룩 들어옴 
+            //자동호출 - 오브젝트로 넘어와서 스트링으로 바꿔야함
+            $('#sel').append(JSON.stringify(obj));
+        }
+        //전체 로드가 끝나면 로드스크립트 함수 호출 (동적)
+        function loadScript(url) { //위에서 가지고온 함수를 넣어주고
+            var dScript = document.createElement('script'); //바디에 <스크립트></스크립트>를 만들고
+            dScript.src = url; //만들어준 스크립트에 위에 함수 넣어주고
+            document.body.appendChild(dScript); //그 스크립트를 바디에 넣어주고 
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div id="sel"></div>
+    
+</body>
+</html>
